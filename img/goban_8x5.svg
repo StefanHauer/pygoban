@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="176mm" height="118.8mm" viewBox="0 0 176 118.8">
+<path fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 11 12 L 11 106.800781 "/>
+<path fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 33 12 L 33 106.800781 "/>
+<path fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 55 12 L 55 106.800781 "/>
+<path fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 77 12 L 77 106.800781 "/>
+<path fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 99 12 L 99 106.800781 "/>
+<path fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 121 12 L 121 106.800781 "/>
+<path fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 143 12 L 143 106.800781 "/>
+<path fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 165 12 L 165 106.800781 "/>
+<path fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 11 12 L 165 12 "/>
+<path fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 11 35.699219 L 165 35.699219 "/>
+<path fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 11 59.398438 L 165 59.398438 "/>
+<path fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 11 83.101562 L 165 83.101562 "/>
+<path fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 11 106.800781 L 165 106.800781 "/>
+<path fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 55 59.398438 L 55 59.398438 "/>
+<path fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 55 59.398438 L 55 59.398438 "/>
+<path fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 121 59.398438 L 121 59.398438 "/>
+<path fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 121 59.398438 L 121 59.398438 "/>
+<path fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 55 59.398438 L 55 59.398438 "/>
+<path fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 55 59.398438 L 55 59.398438 "/>
+<path fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 1 8.332031 C 1 4.285156 4.285156 1 8.332031 1 L 167.667969 1 C 171.714844 1 175 4.285156 175 8.332031 L 175 110.464844 C 175 114.515625 171.714844 117.800781 167.667969 117.800781 L 8.332031 117.800781 C 4.285156 117.800781 1 114.515625 1 110.464844 Z M 1 8.332031 "/>
+</svg>
