@@ -13,14 +13,15 @@ class GobanMaker:
     size : tuple of two int, default=(9,9)
         Number of vertical and horizontal lines that make up the grid.
     line_widths : tuple of two float, default=(1.,2.)
-        Line widths of the grid (thinner lines), and the border of the grid (thicker lines), both in mm.
+        Line widths of the grid (thinner lines), and the border of the grid (thicker lines), both
+        in mm.
     line_spacing : tuple of two float, default=(22., 23.7)
         Spacing between vertical and horizontal lines of the grid in mm.
     star_point_diameter : float, default=4
         Diameter of the star point markers in mm.
     star_point_pos : list of tuples, default='auto'
-        Grid points where to put star point markers. If 'auto', will try to put them in the 3 $\times$ 3 corners
-        on the center of the sides, and in the center, where possible.
+        Grid points where to put star point markers. If 'auto', will try to put them in the
+        3 $\times$ 3 corners on the center of the sides, and in the center, where possible.
     x_annotation : [None, 'arabic_numerals', 'chinese_numerals', 'latin_letters'], default=None
         Annotation style for the vertical grid lines.
     y_annotation : [None, 'arabic_numerals', 'chinese_numerals', 'latin_letters'], default=None
@@ -32,7 +33,7 @@ class GobanMaker:
     """
 
     def __init__(
-            self, size=(9,9),
+            self, *, size=(9,9),
             line_widths=(1.,2.),
             line_spacing=(22., 23.7),
             border_spacing=(11.,12.),
@@ -269,7 +270,6 @@ class GobanMaker:
             context.move_to(x_pos, y_pos)
             context.line_to(x_pos, y_pos)
             context.stroke()
-        return
 
     def _get_auto_star_point_pos(self):
         """Automatically get the grid positions of the star point markers.
@@ -376,11 +376,14 @@ class GobanMaker:
             String for the specified index.
         """
         if annotation_style == "arabic_numerals":
-            return str(int(index+1))
+            my_string =  str(int(index+1))
         elif annotation_style == "latin_letters":
-            return string.ascii_uppercase.replace("I", "")[index]
+            my_string =  string.ascii_uppercase.replace("I", "")[index]
         elif annotation_style == "chinese_numerals":
-            return cn2an.an2cn(index+1)
+            my_string =  cn2an.an2cn(index+1)
+        else:
+            raise ValueError(f"Unknown annotation style '{annotation_style}' specified.")
+        return my_string
 
     @staticmethod
     def _add_text(context, my_text, pos, theta = 0.0):
@@ -452,4 +455,3 @@ class GobanMaker:
 
         context.close_path()
         context.stroke()
-        return
