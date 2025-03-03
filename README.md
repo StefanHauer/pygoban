@@ -17,10 +17,11 @@ With this library you can easily create your own boards with
 
 ## Installation
 
-Download [this repository](https://pip.pypa.io/en/stable/) and execute setup.py to install.
+Download [this repository](https://pip.pypa.io/en/stable/), change the directory to that folder and install via pip:
 
 ```bash
-python setup.py
+cd C:\downloaded\folder
+pip install .
 ```
 
 ## Usage
