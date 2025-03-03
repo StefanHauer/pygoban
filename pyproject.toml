@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=62.0", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pygoban"
+version = "0.1.0"
+authors = [
+  { name="Stefan F. Hauer", email="stefan.f.hauer@gmx.at" },
+]
+description = "Create svg files of Go boards."
+readme = "./README.md"
+requires-python = ">=3.6"
+dependencies = [
+    "pycairo",
+    "cn2an",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/StefanHauer/pygoban"
+Issues = "https://github.com/StefanHauer/pygoban/issues"
