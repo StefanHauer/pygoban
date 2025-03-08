@@ -1,4 +1,4 @@
-<img src="./img/pygoban_header.jpg"/>
+<img src="./docs/img/pygoban_header.jpg"/>
 
 # pygoban
 
