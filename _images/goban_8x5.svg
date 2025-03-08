@@ -13,11 +13,11 @@
 <path fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 11 59.398438 L 165 59.398438 "/>
 <path fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 11 83.101562 L 165 83.101562 "/>
 <path fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 11 106.800781 L 165 106.800781 "/>
-<path fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 55 59.398438 L 55 59.398438 "/>
-<path fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 55 59.398438 L 55 59.398438 "/>
-<path fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 121 59.398438 L 121 59.398438 "/>
-<path fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 121 59.398438 L 121 59.398438 "/>
-<path fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 55 59.398438 L 55 59.398438 "/>
-<path fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 55 59.398438 L 55 59.398438 "/>
+<path fill-rule="nonzero" fill="rgb(0%, 0%, 0%)" fill-opacity="1" d="M 57 59.398438 C 57 62.066406 53 62.066406 53 59.398438 C 53 56.734375 57 56.734375 57 59.398438 "/>
+<path fill-rule="nonzero" fill="rgb(0%, 0%, 0%)" fill-opacity="1" d="M 57 59.398438 C 57 62.066406 53 62.066406 53 59.398438 C 53 56.734375 57 56.734375 57 59.398438 "/>
+<path fill-rule="nonzero" fill="rgb(0%, 0%, 0%)" fill-opacity="1" d="M 123 59.398438 C 123 62.066406 119 62.066406 119 59.398438 C 119 56.734375 123 56.734375 123 59.398438 "/>
+<path fill-rule="nonzero" fill="rgb(0%, 0%, 0%)" fill-opacity="1" d="M 123 59.398438 C 123 62.066406 119 62.066406 119 59.398438 C 119 56.734375 123 56.734375 123 59.398438 "/>
+<path fill-rule="nonzero" fill="rgb(0%, 0%, 0%)" fill-opacity="1" d="M 57 59.398438 C 57 62.066406 53 62.066406 53 59.398438 C 53 56.734375 57 56.734375 57 59.398438 "/>
+<path fill-rule="nonzero" fill="rgb(0%, 0%, 0%)" fill-opacity="1" d="M 57 59.398438 C 57 62.066406 53 62.066406 53 59.398438 C 53 56.734375 57 56.734375 57 59.398438 "/>
 <path fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 1 8.332031 C 1 4.285156 4.285156 1 8.332031 1 L 167.667969 1 C 171.714844 1 175 4.285156 175 8.332031 L 175 110.464844 C 175 114.515625 171.714844 117.800781 167.667969 117.800781 L 8.332031 117.800781 C 4.285156 117.800781 1 114.515625 1 110.464844 Z M 1 8.332031 "/>
 </svg>

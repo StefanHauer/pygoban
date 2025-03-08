@@ -18,14 +18,14 @@
 <path fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 11 154.199219 L 187 154.199219 "/>
 <path fill="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 11 177.898438 L 187 177.898438 "/>
 <path fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 11 201.601562 L 187 201.601562 "/>
-<path fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 55 59.398438 L 55 59.398438 "/>
-<path fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 55 154.199219 L 55 154.199219 "/>
-<path fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 143 59.398438 L 143 59.398438 "/>
-<path fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 143 154.199219 L 143 154.199219 "/>
-<path fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 99 106.800781 L 99 106.800781 "/>
-<path fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 99 59.398438 L 99 59.398438 "/>
-<path fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 99 154.199219 L 99 154.199219 "/>
-<path fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 55 106.800781 L 55 106.800781 "/>
-<path fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 143 106.800781 L 143 106.800781 "/>
+<path fill-rule="nonzero" fill="rgb(0%, 0%, 0%)" fill-opacity="1" d="M 36 35.699219 C 36 39.699219 30 39.699219 30 35.699219 C 30 31.699219 36 31.699219 36 35.699219 "/>
+<path fill-rule="nonzero" fill="rgb(0%, 0%, 0%)" fill-opacity="1" d="M 36 177.898438 C 36 181.898438 30 181.898438 30 177.898438 C 30 173.898438 36 173.898438 36 177.898438 "/>
+<path fill-rule="nonzero" fill="rgb(0%, 0%, 0%)" fill-opacity="1" d="M 168 35.699219 C 168 39.699219 162 39.699219 162 35.699219 C 162 31.699219 168 31.699219 168 35.699219 "/>
+<path fill-rule="nonzero" fill="rgb(0%, 0%, 0%)" fill-opacity="1" d="M 168 177.898438 C 168 181.898438 162 181.898438 162 177.898438 C 162 173.898438 168 173.898438 168 177.898438 "/>
+<path fill-rule="nonzero" fill="rgb(0%, 0%, 0%)" fill-opacity="1" d="M 102 106.800781 C 102 110.800781 96 110.800781 96 106.800781 C 96 102.800781 102 102.800781 102 106.800781 "/>
+<path fill-rule="nonzero" fill="rgb(0%, 0%, 0%)" fill-opacity="1" d="M 102 35.699219 C 102 39.699219 96 39.699219 96 35.699219 C 96 31.699219 102 31.699219 102 35.699219 "/>
+<path fill-rule="nonzero" fill="rgb(0%, 0%, 0%)" fill-opacity="1" d="M 102 177.898438 C 102 181.898438 96 181.898438 96 177.898438 C 96 173.898438 102 173.898438 102 177.898438 "/>
+<path fill-rule="nonzero" fill="rgb(0%, 0%, 0%)" fill-opacity="1" d="M 36 106.800781 C 36 110.800781 30 110.800781 30 106.800781 C 30 102.800781 36 102.800781 36 106.800781 "/>
+<path fill-rule="nonzero" fill="rgb(0%, 0%, 0%)" fill-opacity="1" d="M 168 106.800781 C 168 110.800781 162 110.800781 162 106.800781 C 162 102.800781 168 102.800781 168 106.800781 "/>
 <path fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="10" d="M 1 8.332031 C 1 4.285156 4.285156 1 8.332031 1 L 189.667969 1 C 193.714844 1 197 4.285156 197 8.332031 L 197 205.265625 C 197 209.316406 193.714844 212.601562 189.667969 212.601562 L 8.332031 212.601562 C 4.285156 212.601562 1 209.316406 1 205.265625 Z M 1 8.332031 "/>
 </svg>

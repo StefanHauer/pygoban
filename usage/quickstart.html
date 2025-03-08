@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quickstart &mdash; pygoban 0.1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="API" href="pygoban_class.html" />
+    <link rel="prev" title="Installation" href="installation.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            pygoban
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Quickstart</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#specifying-the-board-size">Specifying the Board size</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#adjusting-the-grid-spacing">Adjusting the Grid Spacing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#adding-annotation">Adding Annotation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#adjusting-star-point-markers">Adjusting Star Point Markers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="pygoban_class.html">API</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">pygoban</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Quickstart</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/usage/quickstart.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="quickstart">
+<span id="id1"></span><h1>Quickstart<a class="headerlink" href="#quickstart" title="Permalink to this heading"></a></h1>
+<section id="specifying-the-board-size">
+<h2>Specifying the Board size<a class="headerlink" href="#specifying-the-board-size" title="Permalink to this heading"></a></h2>
+<p>After <a class="reference internal" href="installation.html#installation"><span class="std std-ref">Installation</span></a>, import the GobanMaker class from the library.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kn">from</span> <span class="nn">pygoban</span> <span class="kn">import</span> <span class="n">GobanMaker</span>
+</pre></div>
+</div>
+<p>To create your svg file, specify the size of the (square) grid as an integer. While he most common boards are 9 × 9, 13 × 13, or 19 × 19, you can use any number greater than 1.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">save_path</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;MyGoban.svg&quot;</span>
+<span class="linenos">2</span><span class="n">g</span> <span class="o">=</span> <span class="n">GobanMaker</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="mi">9</span><span class="p">)</span>
+<span class="linenos">3</span><span class="n">g</span><span class="o">.</span><span class="n">create_svg_file</span><span class="p">(</span><span class="n">save_path</span><span class="p">)</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/goban_9x9.svg"><img alt="Example of a 9 times 9 grid." src="../_images/goban_9x9.svg" width="400" /></a>
+<p>Instead of specifying the size as an integer, you can also use a tuple. So instead of size=9, you could also specify size=(9,9) and get the same output.</p>
+<p>So while usually people play on square grids, if you want to create rectangular grids, you can do this too. Would anyone ever play on a board like this - most likely not, but if you ever do, let me know!</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">g</span> <span class="o">=</span> <span class="n">GobanMaker</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+<span class="linenos">2</span><span class="n">g</span><span class="o">.</span><span class="n">create_svg_file</span><span class="p">(</span><span class="n">save_path</span><span class="p">)</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/goban_8x5.svg"><img alt="Example of a 8 times 5 grid." src="../_images/goban_8x5.svg" width="400" /></a>
+<p>In case you want to fine tune any of the created files with things that are beyond the capabilities of this library, you can always import the file into any vector graphics program and edit it there, for instanace with the free to use and open source software <a class="reference external" href="https://inkscape.org/">Inkscape</a>.</p>
+</section>
+<section id="adjusting-the-grid-spacing">
+<h2>Adjusting the Grid Spacing<a class="headerlink" href="#adjusting-the-grid-spacing" title="Permalink to this heading"></a></h2>
+<p>Using the “line_spacing” parameter of the __init__ function, you can adjust the spacing between the grid lines. This way, you can tailor your board to the size of your Go stones.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">g</span> <span class="o">=</span> <span class="n">GobanMaker</span><span class="p">(</span>
+<span class="linenos">2</span>   <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="mi">9</span><span class="p">),</span>
+<span class="linenos">3</span>   <span class="n">line_spacing</span><span class="o">=</span><span class="p">(</span><span class="mf">22.</span><span class="p">,</span> <span class="mf">23.7</span><span class="p">)</span>
+<span class="linenos">4</span><span class="p">)</span>
+<span class="linenos">5</span><span class="n">g</span><span class="o">.</span><span class="n">create_svg_file</span><span class="p">(</span><span class="n">save_path</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="adding-annotation">
+<h2>Adding Annotation<a class="headerlink" href="#adding-annotation" title="Permalink to this heading"></a></h2>
+<p>Most boards do not label the horizontal and vertical grids, but if you wish to, you can specify to annotate them either with Arabic numerals, Chinese numerals, or Latin letters using the parameters “x_annotation” and “y_annotation”. You should also increase the space between the grid border and the border of the board so that stones on the sides will not overlap with the annotation.
+Please note, that as a convention the letter “I” is skipped for the annotation, as “I” and “J” are similar and could lead to confusion.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="n">GobanMaker</span><span class="p">(</span>
+   <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="mi">9</span><span class="p">),</span>
+   <span class="n">x_annotation</span><span class="o">=</span><span class="s2">&quot;latin_letters&quot;</span><span class="p">,</span>
+   <span class="n">y_annotation</span><span class="o">=</span><span class="s2">&quot;roman_numerals&quot;</span><span class="p">,</span>
+   <span class="n">border_spacing</span><span class="o">=</span><span class="p">(</span><span class="mf">28.</span><span class="p">,</span><span class="mf">28.</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">create_svg_file</span><span class="p">(</span><span class="n">save_path</span><span class="p">)</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/goban_9x9_annotated.svg"><img alt="Example of a 9 times 9 grid." src="../_images/goban_9x9_annotated.svg" width="400" /></a>
+<p>When you want to use Chinese numerals, make sure that the font face that you have selected can display Chinese characters. If your chosen font is unable to do so, you would see rectangles instead of Chinese character as the annotation. To show all fonts that are installed on your computer, you can use the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>fc-list<span class="w"> </span>:<span class="w"> </span>family
+</pre></div>
+</div>
+</section>
+<section id="adjusting-star-point-markers">
+<h2>Adjusting Star Point Markers<a class="headerlink" href="#adjusting-star-point-markers" title="Permalink to this heading"></a></h2>
+<p>You can also adjust the star point markers of your board. For instance, you can change the diameter in mm with the “star_point_diameter” parameter.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="n">GobanMaker</span><span class="p">(</span>
+   <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="mi">9</span><span class="p">),</span>
+   <span class="n">star_point_pos</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span><span class="p">,</span>
+   <span class="n">star_point_diameter</span><span class="o">=</span><span class="mi">10</span>
+<span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">create_svg_file</span><span class="p">(</span><span class="n">save_path</span><span class="p">)</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/goban_9x9_spm10mm.svg"><img alt="Example of a 9 times 9 grid." src="../_images/goban_9x9_spm10mm.svg" width="400" /></a>
+<p>When setting the parameter “star_point_pos” during initialization to an integer, it will put star points on the those lines.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="n">GobanMaker</span><span class="p">(</span>
+   <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="mi">9</span><span class="p">),</span>
+   <span class="n">star_point_diameter</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span>
+   <span class="n">star_point_pos</span><span class="o">=</span><span class="mi">2</span>
+<span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">create_svg_file</span><span class="p">(</span><span class="n">save_path</span><span class="p">)</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/goban_9x9_spm_at_2.svg"><img alt="Example of a 9 times 9 grid with star point markers at the second grid lines." src="../_images/goban_9x9_spm_at_2.svg" width="400" /></a>
+<p>You can also specify the star point marker positions manually, by defining a list of tuples denoting the positions on the grid.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">star_point_pos</span> <span class="o">=</span> <span class="p">[</span>
+   <span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+<span class="p">]</span>
+<span class="n">g</span> <span class="o">=</span> <span class="n">GobanMaker</span><span class="p">(</span>
+   <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="mi">9</span><span class="p">),</span>
+   <span class="n">star_point_diameter</span><span class="o">=</span><span class="mi">6</span><span class="p">,</span>
+   <span class="n">star_point_pos</span><span class="o">=</span><span class="n">star_point_pos</span>
+<span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">create_svg_file</span><span class="p">(</span><span class="n">save_path</span><span class="p">)</span>
+</pre></div>
+</div>
+<a class="reference internal image-reference" href="../_images/goban_9x9_two_spm.svg"><img alt="Example of a 9 times 9 grid with only to star point markers." src="../_images/goban_9x9_two_spm.svg" width="400" /></a>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="installation.html" class="btn btn-neutral float-left" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pygoban_class.html" class="btn btn-neutral float-right" title="API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Stefan F. Hauer.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
