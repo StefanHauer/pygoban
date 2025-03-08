@@ -327,6 +327,8 @@ class GobanMaker:
 
         if self.star_point_pos == "auto":
             star_point_pos = self._get_auto_star_point_pos()
+        elif isinstance(self.star_point_pos, int):
+            star_point_pos = self._get_auto_star_point_pos(n=self.star_point_pos)
         else:
             star_point_pos = self.star_point_pos
 
@@ -338,10 +340,15 @@ class GobanMaker:
             context.line_to(x_pos, y_pos)
             context.stroke()
 
-    def _get_auto_star_point_pos(self):
+    def _get_auto_star_point_pos(self, n=4):
         """Automatically get the grid positions of the star point markers.
-        Will do so on the (3,3) points (if possible), in the centerpoint (if possible),
+        Will do so on the (n,n) points (if possible), in the centerpoint (if possible),
         and on the centers of the sides (if possible).
+        
+        Parameters
+        ----------
+        n : int, default=4
+            Specifies the grids on which to put the star point markers.
         
         Returns
         -------
@@ -349,12 +356,12 @@ class GobanMaker:
             List of tuples specifying the star points on the grid.
         """
         star_point_pos = []
-        if self.size[0]>=3 and self.size[1]>=3:
+        if self.size[0]>=n and self.size[1]>=n:
             star_point_pos += [
-                (3,3),
-                (3, self.size[1]-2),
-                (self.size[0]-2,3),
-                (self.size[0]-2, self.size[1]-2)
+                (n,n),
+                (n, self.size[1]-(n-1)),
+                (self.size[0]-(n-1),n),
+                (self.size[0]-(n-1), self.size[1]-(n-1))
             ]
             if self.size[0]%2!=0 and self.size[1]%2!=0:
                 star_point_pos += [
@@ -365,17 +372,15 @@ class GobanMaker:
             if self.size[0]%2!=0:
                 x_middle_pos = (self.size[0]-1)/2 +1
                 star_point_pos += [
-                    (x_middle_pos,3),
-                    (x_middle_pos, self.size[1]-2),
+                    (x_middle_pos,n),
+                    (x_middle_pos, self.size[1]-(n-1)),
                 ]
             if self.size[1]%2!=0:
                 y_middle_pos = (self.size[1]-1)/2 +1
                 star_point_pos += [
-                    (3, y_middle_pos),
-                    (self.size[1]-2, y_middle_pos),
+                    (n, y_middle_pos),
+                    (self.size[1]-(n-1), y_middle_pos),
                 ]
-
-
         return star_point_pos
 
     def _draw_annotations(self, context):
