@@ -8,6 +8,8 @@ jobs:
       contents: write
     steps:
     - uses: actions/checkout@v4
+    - name: Change ownership of /github/home
+      run: sudo chown -R $(whoami) /github/home
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v3
       with:
