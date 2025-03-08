@@ -32,6 +32,19 @@ class GobanMaker:
         Font face to use for the annotation of the vertical and horizontal grid lines.
     font_size : float, default=8
         Font size to use for the annotation of the vertical and horizontal grid lines.
+    
+    Examples
+    --------
+
+    >>> g = GobanMaker(
+    ...    size=13
+    ... )
+    >>> g.create_svg_file('test.svg')
+
+    >>> g = GobanMaker(
+    ...    size=(9,5)
+    ... )
+    >>> g.create_svg_file('test.svg')
     """
 
     def __init__(
@@ -65,6 +78,17 @@ class GobanMaker:
         ----------
         size : int or tuple of ints
             Number of vertical and horizontal lines that make up the grid.
+
+        Examples
+        --------
+
+        >>> g = GobanMaker()
+        >>> g.set_board_size(9)
+        >>> g.create_svg_file('test.svg')
+
+        >>> g = GobanMaker()
+        >>> g.set_board_size((13,12))
+        >>> g.create_svg_file('test.svg')
         """
         if isinstance(size, int):
             size = (size,size)
@@ -85,6 +109,13 @@ class GobanMaker:
         line_widths : tuple of floats
             Line thickness in mm for the thinner grid lines and the thicker lines of the
             grid border.
+
+        Examples
+        --------
+
+        >>> g = GobanMaker()
+        >>> g.set_line_widths((1,2))
+        >>> g.create_svg_file('test.svg')
         """
         line_widths = (min(line_widths), max(line_widths))
         self.line_widths=line_widths
@@ -94,11 +125,24 @@ class GobanMaker:
         
         Parameters
         ----------
-        star_point_pos : tuple or 'auto'.
-            If set to 'auto', will create star points on the 3x3, center and
-            3xcenter grid intersections.
+        star_point_pos : int, tuple or 'auto'.
+            If set to 'auto', will create star points on the 4x4, center and
+            4xcenter grid intersections. If an int n is specified, will put the
+            star points on the nxn , center and nxcenter grid intersections.
+            If a list of tuples is specified will create the point on only those
+            points.
         star_point_diameter : float
             Diameter of the star point marker in mm.
+
+        Examples
+        --------
+
+        >>> g = GobanMaker()
+        >>> g.set_star_point_settings(star_point_pos=2)
+        >>> g.create_svg_file('test.svg')
+
+        >>> g.set_star_point_settings(star_point_pos=[(9,9)])
+        >>> g.create_svg_file('test.svg')
         """
         if star_point_pos is not None:
             self.star_point_pos = star_point_pos
@@ -112,6 +156,10 @@ class GobanMaker:
         ----------
         line_spacing : float or tuple of two floats
             Spacing between grids in mm.
+
+        >>> g = GobanMaker()
+        >>> g.set_line_spacing((22.,23.))
+        >>> g.create_svg_file('test.svg')
         """
         if isinstance(line_spacing, float):
             line_spacing = (line_spacing, line_spacing)
@@ -131,6 +179,10 @@ class GobanMaker:
         ----------
         border_spacing : float or tuple of two floats
             Spacing of border in mm.
+
+        >>> g = GobanMaker()
+        >>> g.set_border_spacing((28.,28.))
+        >>> g.create_svg_file('test.svg')
         """
         if isinstance(border_spacing, float):
             border_spacing = (border_spacing, border_spacing)
@@ -153,6 +205,13 @@ class GobanMaker:
             Annotation of the x-axis, i.e., the player facing sides of the board.
         y_annotation : [None, "arabic_numerals", "chinese_numerals", "latin_letters"]
             Annotation of the y-axis, i.e., the left/right sides of the board.
+
+        >>> g = GobanMaker()
+        >>> g.set_grid_annotation_style(
+        ...     x_annotation='arabic_numerals',
+        ...     y_annotation='latin_letters'
+        ... )
+        >>> g.create_svg_file('test.svg')
         """
         legal_values = [None, "arabic_numerals", "chinese_numerals", "latin_letters"]
         if x_annotation in legal_values:
@@ -181,6 +240,12 @@ class GobanMaker:
         ----------
         font_size : float
             Font size to use.
+
+        >>> g = GobanMaker(
+        ...     x_annotation="latin_letters"
+        ... )
+        >>> g.set_font_size(10)
+        >>> g.create_svg_file('test.svg')
         """
         self.font_size=font_size
 
@@ -457,3 +522,7 @@ class GobanMaker:
 
         context.close_path()
         context.stroke()
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()
