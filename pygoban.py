@@ -17,6 +17,8 @@ class GobanMaker:
         in mm.
     line_spacing : tuple of two float, default=(22., 23.7)
         Spacing between vertical and horizontal lines of the grid in mm.
+    border_spacing : tuple of two float, default=(11.,12.)
+        Spacing of the border in mm, i.e., the space outside the grid.
     star_point_diameter : float, default=4
         Diameter of the star point markers in mm.
     star_point_pos : list of tuples, default='auto'
