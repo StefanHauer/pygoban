@@ -39,12 +39,12 @@ class GobanMaker:
     >>> g = GobanMaker(
     ...    size=13
     ... )
-    >>> g.create_svg_file('test.svg')
+    >>> g.create_svg_file(None)
 
     >>> g = GobanMaker(
     ...    size=(9,5)
     ... )
-    >>> g.create_svg_file('test.svg')
+    >>> g.create_svg_file(None)
     """
 
     def __init__(
@@ -84,11 +84,11 @@ class GobanMaker:
 
         >>> g = GobanMaker()
         >>> g.set_board_size(9)
-        >>> g.create_svg_file('test.svg')
+        >>> g.create_svg_file(None)
 
         >>> g = GobanMaker()
         >>> g.set_board_size((13,12))
-        >>> g.create_svg_file('test.svg')
+        >>> g.create_svg_file(None)
         """
         if isinstance(size, int):
             size = (size,size)
@@ -115,7 +115,7 @@ class GobanMaker:
 
         >>> g = GobanMaker()
         >>> g.set_line_widths((1,2))
-        >>> g.create_svg_file('test.svg')
+        >>> g.create_svg_file(None)
         """
         line_widths = (min(line_widths), max(line_widths))
         self.line_widths=line_widths
@@ -139,10 +139,10 @@ class GobanMaker:
 
         >>> g = GobanMaker()
         >>> g.set_star_point_settings(star_point_pos=2)
-        >>> g.create_svg_file('test.svg')
+        >>> g.create_svg_file(None)
 
         >>> g.set_star_point_settings(star_point_pos=[(9,9)])
-        >>> g.create_svg_file('test.svg')
+        >>> g.create_svg_file(None)
         """
         if star_point_pos is not None:
             self.star_point_pos = star_point_pos
@@ -159,7 +159,7 @@ class GobanMaker:
 
         >>> g = GobanMaker()
         >>> g.set_line_spacing((22.,23.))
-        >>> g.create_svg_file('test.svg')
+        >>> g.create_svg_file(None)
         """
         if isinstance(line_spacing, float):
             line_spacing = (line_spacing, line_spacing)
@@ -182,7 +182,7 @@ class GobanMaker:
 
         >>> g = GobanMaker()
         >>> g.set_border_spacing((28.,28.))
-        >>> g.create_svg_file('test.svg')
+        >>> g.create_svg_file(None)
         """
         if isinstance(border_spacing, float):
             border_spacing = (border_spacing, border_spacing)
@@ -211,7 +211,7 @@ class GobanMaker:
         ...     x_annotation='arabic_numerals',
         ...     y_annotation='latin_letters'
         ... )
-        >>> g.create_svg_file('test.svg')
+        >>> g.create_svg_file(None)
         """
         legal_values = [None, "arabic_numerals", "chinese_numerals", "latin_letters"]
         if x_annotation in legal_values:
@@ -245,7 +245,7 @@ class GobanMaker:
         ...     x_annotation="latin_letters"
         ... )
         >>> g.set_font_size(10)
-        >>> g.create_svg_file('test.svg')
+        >>> g.create_svg_file(None)
         """
         self.font_size=font_size
 
