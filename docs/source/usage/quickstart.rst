@@ -27,6 +27,10 @@ To create your svg file, specify the size of the (square) grid as an integer. Wh
    g = GobanMaker(size=9)
    g.create_svg_file(save_path)
 
+.. image:: ..\\..\\img\\goban_9x9.svg
+  :width: 400
+  :alt: Example of a 9 times 9 grid.
+
 Instead of specifying the size as an integer, you can also use a tuple. So instead of size=9, you could also specify size=(9,9) and get the same output.
 
 So while usually people play on square grids, if you want to create rectangular grids, you can do this too. Would anyone ever play on a board like this - most likely not, but if you ever do, let me know!
@@ -34,8 +38,12 @@ So while usually people play on square grids, if you want to create rectangular 
 .. code-block:: python
    :linenos:
 
-   g = GobanMaker(size=(9,13))
+   g = GobanMaker(size=(8,5))
    g.create_svg_file(save_path)
+
+.. image:: ..\\..\\img\\goban_8x5.svg
+  :width: 400
+  :alt: Example of a 8 times 5 grid.
 
 In case you want to fine tune any of the created files with things that are beyond the capabilities of this library, you can always import the file into any vector graphics program and edit it there, for instanace with the free to use and open source software `Inkscape <https://inkscape.org/>`_.
 
@@ -62,12 +70,16 @@ Please note, that as a convention the letter "I" is skipped for the annotation, 
 .. code-block:: python
 
    g = GobanMaker(
-      size=(9,13),
-      x_annotation="chinese_numerals",
-      y_annotation="latin_letters",
+      size=(9,9),
+      x_annotation="latin_letters",
+      y_annotation="roman_numerals",
       border_spacing=(28.,28.)
    )
    g.create_svg_file(save_path)
+
+.. image:: ..\\..\\img\\goban_9x9_annotated.svg
+  :width: 400
+  :alt: Example of a 9 times 9 grid.
 
 When you want to use Chinese numerals, make sure that the font face that you have selected can display Chinese characters. If your chosen font is unable to do so, you would see rectangles instead of Chinese character as the annotation. To show all fonts that are installed on your computer, you can use the following command:
 
@@ -89,15 +101,24 @@ You can also adjust the star point markers of your board. For instance, you can 
    )
    g.create_svg_file(save_path)
 
+.. image:: ..\\..\\img\\goban_9x9_spm10mm.svg
+  :width: 400
+  :alt: Example of a 9 times 9 grid.
+
 When setting the parameter "star_point_pos" during initialization to an integer, it will put star points on the those lines.
 
 .. code-block:: python
 
    g = GobanMaker(
       size=(9,9),
+      star_point_diameter=6,
       star_point_pos=2
    )
    g.create_svg_file(save_path)
+
+.. image:: ..\\..\\img\\goban_9x9_spm_at_2.svg
+  :width: 400
+  :alt: Example of a 9 times 9 grid with star point markers at the second grid lines.
 
 You can also specify the star point marker positions manually, by defining a list of tuples denoting the positions on the grid.
 
@@ -108,7 +129,11 @@ You can also specify the star point marker positions manually, by defining a lis
    ]
    g = GobanMaker(
       size=(9,9),
+      star_point_diameter=6,
       star_point_pos=star_point_pos
    )
    g.create_svg_file(save_path)
 
+.. image:: ..\\..\\img\\goban_9x9_two_spm.svg
+  :width: 400
+  :alt: Example of a 9 times 9 grid with only to star point markers.
