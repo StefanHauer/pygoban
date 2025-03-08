@@ -335,10 +335,9 @@ class GobanMaker:
         for x_grid_pos, y_grid_pos in star_point_pos:
             x_pos = self.border_spacing[0] + self.line_spacing[0]*(x_grid_pos-1)
             y_pos = self.border_spacing[1] + self.line_spacing[1]*(y_grid_pos-1)
-            context.set_line_width(4)
-            context.move_to(x_pos, y_pos)
-            context.line_to(x_pos, y_pos)
-            context.stroke()
+            context.set_line_width(0)
+            context.arc(x_pos, y_pos, self.star_point_diameter/2, 0, 2*math.pi)
+            context.fill()
 
     def _get_auto_star_point_pos(self, n=4):
         """Automatically get the grid positions of the star point markers.
