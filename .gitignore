@@ -1,3 +1,4 @@
 __pycache__/*
 /pygoban.egg-info/*
 /dist/*
+/docs/build/*
