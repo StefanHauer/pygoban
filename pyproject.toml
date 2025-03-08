@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pygoban"
-version = "0.1.0"
+version = "0.2.0"
 authors = [
   { name="Stefan F. Hauer", email="stefan.f.hauer@gmx.at" },
 ]

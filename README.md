@@ -2,7 +2,7 @@
 
 # pygoban
 
-![version](https://img.shields.io/badge/version-0.1.0-orange)
+![version](https://img.shields.io/badge/version-0.2.0-orange)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/StefanHauer/pygoban/LICENSE.txt)
 ![pylint](https://github.com/StefanHauer/pygoban/actions/workflows/pylint.yml/badge.svg)
 ![Downloads](https://img.shields.io/github/downloads/StefanHauer/pygoban/total)

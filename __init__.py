@@ -21,7 +21,7 @@ Documentation is available in three forms:
   3. Basic examples of use are also documented in the README file.
 """
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"
 
 from .pygoban import GobanMaker
 
