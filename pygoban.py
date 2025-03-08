@@ -326,7 +326,11 @@ class GobanMaker:
         context.set_line_cap(cairo.LINE_CAP_ROUND)
 
         if self.star_point_pos == "auto":
-            star_point_pos = self._get_auto_star_point_pos()
+            if self.size[0]<=9 or self.size[1]<=10:
+                n=3
+            else:
+                n=4
+            star_point_pos = self._get_auto_star_point_pos(n=n)
         elif isinstance(self.star_point_pos, int):
             star_point_pos = self._get_auto_star_point_pos(n=self.star_point_pos)
         else:
