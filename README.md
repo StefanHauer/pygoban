@@ -38,7 +38,7 @@ g = GobanMaker(size=9)
 g.create_svg_file(r"C:\Path\To\File\MyGoban.svg")
 ```
 
-<img src="./img/goban_9x9.svg" width="400"
+<img src="./docs/img/goban_9x9.svg" width="400"
     title="Example of a 9 times 9 grid."
 />
 
@@ -51,7 +51,7 @@ g = GobanMaker(size=(8,5))
 g.create_svg_file(r"C:\Path\To\File\MyGoban.svg")
 ```
 
-<img src="./img/goban_8x5.svg" width="400"
+<img src="./docs/img/goban_8x5.svg" width="400"
     title="Example of a 8 times 5 grid."
 />
 
@@ -71,7 +71,7 @@ g = GobanMaker(
 g.create_svg_file(r"C:\Path\To\File\MyGoban.svg")
 ```
 
-<img src="./img/goban_9x9_annotated.svg" width="400"
+<img src="./docs/img/goban_9x9_annotated.svg" width="400"
     title="Example of a 9 times 9 grid."
 />
 
