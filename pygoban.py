@@ -206,7 +206,7 @@ class GobanMaker:
         y_annotation : [None, "arabic_numerals", "chinese_numerals", "latin_letters"]
             Annotation of the y-axis, i.e., the left/right sides of the board.
 
-        >>> g = GobanMaker()
+        >>> g = GobanMaker(size=100)
         >>> g.set_grid_annotation_style(
         ...     x_annotation='arabic_numerals',
         ...     y_annotation='latin_letters'
@@ -453,7 +453,12 @@ class GobanMaker:
         if annotation_style == "arabic_numerals":
             my_string =  str(int(index+1))
         elif annotation_style == "latin_letters":
-            my_string =  string.ascii_uppercase.replace("I", "")[index]
+            base_letters = string.ascii_uppercase.replace("I", "")
+            if int(index/len(base_letters))>0:
+                addendum = GobanMaker._get_annotation_string(int(index/len(base_letters))-1, annotation_style)
+                my_string = addendum + base_letters[index % len(base_letters)]
+            else:
+                my_string =  base_letters[index]
         elif annotation_style == "chinese_numerals":
             my_string =  cn2an.an2cn(index+1)
         else:
