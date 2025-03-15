@@ -105,6 +105,10 @@ Out of the box, *pygoban* uses standard dimensions for the thickness of the grid
 * **font_size : float, default=8**<br>
     Font size to use for the annotation of the vertical and horizontal grid lines.
 
+## Documentation
+
+For further information on how to use pygoban, please check out the [documentation](https://stefanhauer.github.io/pygoban/).
+
 ## Support and Contribution
 
 If you find any bugs, have suggestions for new features, or want to implement features yourself, let me know!
