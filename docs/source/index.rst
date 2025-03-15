@@ -17,7 +17,7 @@ Welcome to pygoban's documentation!
 What is Go?
 ===========
 
-Go is an ancient Chinese board game about capturing territory by placing stones on a grid. If you are new to the game of Go you might want to learn `about the basic rules first <https://en.wikipedia.org/wiki/Rules_of_Go>`_ and afterward trying out to `play online <https://online-go.com/>`_.
+Go is an ancient Chinese board game about capturing territory by placing stones on a grid. If you are new to the game of Go you might want to learn `about the basic rules first <https://en.wikipedia.org/wiki/Rules_of_Go>`_ or learn to play via online tutorials `here <https://www.learn-go.net/>`_ or `here <https://online-go.com/learn-to-play-go>`_, and afterward trying out to `play online <https://online-go.com/>`_.
 
 What is Pygoban?
 ================
