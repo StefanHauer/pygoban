@@ -125,10 +125,10 @@ class GobanMaker:
         
         Parameters
         ----------
-        star_point_pos : int, tuple or 'auto'.
-            If set to 'auto', will create star points on the 4x4, center and
-            4xcenter grid intersections. If an int n is specified, will put the
-            star points on the nxn , center and nxcenter grid intersections.
+        star_point_pos : int, tuple, or 'auto'.
+            If set to 'auto', will create 8 star points on line 4 and in the center.
+            If an int n is specified, will put the
+            star points on the line n and the center.
             If a list of tuples is specified will create the point on only those
             points.
         star_point_diameter : float
@@ -142,6 +142,9 @@ class GobanMaker:
         >>> g.create_svg_file(None)
 
         >>> g.set_star_point_settings(star_point_pos=[(9,9)])
+        >>> g.create_svg_file(None)
+
+        >>> g.set_star_point_settings(star_point_pos='l2p5')
         >>> g.create_svg_file(None)
         """
         if star_point_pos is not None:
@@ -326,13 +329,21 @@ class GobanMaker:
         context.set_line_cap(cairo.LINE_CAP_ROUND)
 
         if self.star_point_pos == "auto":
-            if self.size[0]<=9 or self.size[1]<=10:
+            if self.size[0]<=9 or self.size[1]<=9:
                 l=3
+                n=5
+            elif self.size[0]<= 13 and self.size[1]<=13:
+                l=4
+                n=5
             else:
                 l=4
-            star_point_pos = self._get_auto_star_point_pos(l=l)
+                n=9
+            star_point_pos = self._get_auto_star_point_pos(l=l, n=n)
         elif isinstance(self.star_point_pos, int):
             star_point_pos = self._get_auto_star_point_pos(l=self.star_point_pos)
+        elif isinstance(self.star_point_pos, str):
+            l, n = self._interpret_star_point_string(self.star_point_pos)
+            star_point_pos = self._get_auto_star_point_pos(l=l, n=n)
         else:
             star_point_pos = self.star_point_pos
 
@@ -343,7 +354,28 @@ class GobanMaker:
             context.arc(x_pos, y_pos, self.star_point_diameter/2, 0, 2*math.pi)
             context.fill()
 
-    def _get_auto_star_point_pos(self, l=4):
+    @staticmethod
+    def _interpret_star_point_string(star_point_string):
+        """Get l and n from the star point string.
+        
+        Parameters
+        ----------
+        star_point_string : str
+            String specifying the line and number of star points in the
+            form 'l4p5', meaning five star points on line four.
+        
+        Returns
+        -------
+        l : int, default=4
+            Specifies the grids on which to put the star point markers.
+        n : int, default=9
+            Number of star points to add. Customary are 9 or, on smaller boards, 5.
+        """
+        l = int(star_point_string.split("l")[1].split("p")[0])
+        n = int(star_point_string.split("l")[1].split("p")[1])
+        return l, n
+
+    def _get_auto_star_point_pos(self, l=4, n=9):
         """Automatically get the grid positions of the star point markers.
         Will do so on the (l,l) points (if possible), in the centerpoint (if possible),
         and on the centers of the sides (if possible).
@@ -352,6 +384,8 @@ class GobanMaker:
         ----------
         l : int, default=4
             Specifies the grids on which to put the star point markers.
+        n : int, default=9
+            Number of star points to add. Customary are 9 or, on smaller boards, 5.
         
         Returns
         -------
@@ -360,25 +394,26 @@ class GobanMaker:
         """
         star_point_pos = []
         if self.size[0]>=l and self.size[1]>=l:
-            star_point_pos += [
-                (l,l),
-                (l, self.size[1]-(l-1)),
-                (self.size[0]-(l-1),l),
-                (self.size[0]-(l-1), self.size[1]-(l-1))
-            ]
-            if self.size[0]%2!=0 and self.size[1]%2!=0:
+            if n>= 4:
+                star_point_pos += [
+                    (l,l),
+                    (l, self.size[1]-(l-1)),
+                    (self.size[0]-(l-1),l),
+                    (self.size[0]-(l-1), self.size[1]-(l-1))
+                ]
+            if self.size[0]%2!=0 and self.size[1]%2!=0 and n%2!=0:
                 star_point_pos += [
                     (
                         (self.size[0]-1)/2 +1, (self.size[1]-1)/2 +1
                     )
                 ]
-            if self.size[0]%2!=0:
+            if self.size[0]%2!=0 and n>=8:
                 x_middle_pos = (self.size[0]-1)/2 +1
                 star_point_pos += [
                     (x_middle_pos,l),
                     (x_middle_pos, self.size[1]-(l-1)),
                 ]
-            if self.size[1]%2!=0:
+            if self.size[1]%2!=0 and n>=8:
                 y_middle_pos = (self.size[1]-1)/2 +1
                 star_point_pos += [
                     (l, y_middle_pos),
