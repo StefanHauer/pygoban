@@ -327,12 +327,12 @@ class GobanMaker:
 
         if self.star_point_pos == "auto":
             if self.size[0]<=9 or self.size[1]<=10:
-                n=3
+                l=3
             else:
-                n=4
-            star_point_pos = self._get_auto_star_point_pos(n=n)
+                l=4
+            star_point_pos = self._get_auto_star_point_pos(l=l)
         elif isinstance(self.star_point_pos, int):
-            star_point_pos = self._get_auto_star_point_pos(n=self.star_point_pos)
+            star_point_pos = self._get_auto_star_point_pos(l=self.star_point_pos)
         else:
             star_point_pos = self.star_point_pos
 
@@ -343,14 +343,14 @@ class GobanMaker:
             context.arc(x_pos, y_pos, self.star_point_diameter/2, 0, 2*math.pi)
             context.fill()
 
-    def _get_auto_star_point_pos(self, n=4):
+    def _get_auto_star_point_pos(self, l=4):
         """Automatically get the grid positions of the star point markers.
-        Will do so on the (n,n) points (if possible), in the centerpoint (if possible),
+        Will do so on the (l,l) points (if possible), in the centerpoint (if possible),
         and on the centers of the sides (if possible).
         
         Parameters
         ----------
-        n : int, default=4
+        l : int, default=4
             Specifies the grids on which to put the star point markers.
         
         Returns
@@ -359,12 +359,12 @@ class GobanMaker:
             List of tuples specifying the star points on the grid.
         """
         star_point_pos = []
-        if self.size[0]>=n and self.size[1]>=n:
+        if self.size[0]>=l and self.size[1]>=l:
             star_point_pos += [
-                (n,n),
-                (n, self.size[1]-(n-1)),
-                (self.size[0]-(n-1),n),
-                (self.size[0]-(n-1), self.size[1]-(n-1))
+                (l,l),
+                (l, self.size[1]-(l-1)),
+                (self.size[0]-(l-1),l),
+                (self.size[0]-(l-1), self.size[1]-(l-1))
             ]
             if self.size[0]%2!=0 and self.size[1]%2!=0:
                 star_point_pos += [
@@ -375,14 +375,14 @@ class GobanMaker:
             if self.size[0]%2!=0:
                 x_middle_pos = (self.size[0]-1)/2 +1
                 star_point_pos += [
-                    (x_middle_pos,n),
-                    (x_middle_pos, self.size[1]-(n-1)),
+                    (x_middle_pos,l),
+                    (x_middle_pos, self.size[1]-(l-1)),
                 ]
             if self.size[1]%2!=0:
                 y_middle_pos = (self.size[1]-1)/2 +1
                 star_point_pos += [
-                    (n, y_middle_pos),
-                    (self.size[1]-(n-1), y_middle_pos),
+                    (l, y_middle_pos),
+                    (self.size[1]-(l-1), y_middle_pos),
                 ]
         return star_point_pos
 
